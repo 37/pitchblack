@@ -1,123 +1,41 @@
 extends layout
 
 block content
-    #page-wrapper
-        <!-- Header -->
-        header#header.alt
-            h1
-                a(href="index.html") Ani
-            nav
-                a(href="#menu") Order
-            nav#menu
-                .inner
-                    h2 Order
-                    ul.links
-                        form(action="#", id="oForm")
-                            li
-                                label(for="oInput1") Name
-                                input(id="oInput1", type="text")
-                            li
-                                label(for="oInput2") Email
-                                input(id="oInput2" type="text")
-                            li
-                                label(for="oInput3") Number of rooms (units)
-                                select(id="oInput3")
-                                    option(value="1" selected) 1
-                                    option(value="2") 2
-                                    option(value="3") 3
-                                    option(value="4") 4
-                                    option(value="5") 5
-                            li
-                                h1(id="oFormCost") Price: $
-                                    span(id='oFormCostDollars') 145
-                                    |  AUD
-                            li
-                                a(href="#", id="oFormPay") Order
-                    a(href="#" class="close") Close
-        section(id="banner")
-            div.inner
-                div.logo
-                    span.icon.fa-eye
-                h2.logotitle
-                    span This is
-                    .logoscroll.active Ani
-                    .logoscroll Convenience
-                    .logoscroll Flawless integration
-                    .logoscroll The Future
-                    .logoscroll Sparta
-                p An interactive assistant for your home
-        section#wrapper
-            <!-- One -->
-            section#one.wrapper.spotlight.style1
-                .inner
-                    div(href="#" class="image")
-                        img(src="images/pic01.png", alt="")
-                    .content
-                        h2.major Sleek and Modern Design
-                        p <strong>Ani</strong> is designed to integrate into existing living spaces with minimal disruption. With a clean, modern design, the units look good without dominating the room. Always there when you need it, but never intrusive when you want time to yourself, <strong>Ani</strong> is like the perfect roommate. In fact, you'll probably forget that <strong>Ani</strong> is a computer program at all!</p>
-            <!-- Two -->
-            section#two.wrapper.alt.spotlight.style2
-                .inner
-                    div(href="#" class="image")
-                        img(src="images/pic02.png", alt="")
-                    .content
-                        h2.major Powered by Awesome Tech
-                        p Driven by Microsoft Kinect and Cortana technologies, and able to hook into the vast computing power of the Azure cloud, <strong>Ani</strong> is smarter than a tree full of owls. Suitable for both home and office environments, <strong>Ani</strong> is an inexpensive and fully scalable platform.</p>
-            <!-- Three -->
-            section#three.wrapper.alt.flip
-                .inner
-                    h2.major Built for you
-                    section(class="features")
-                        article
-                            h3 Powerful hardware
-                            p Equipped with wide-angle Full HD cameras, IR sensors, 3D depth mapping capabilities and pin-drop microphones.
-                        article
-                            h3 Easy to adopt
-                            p The <strong>Ani</strong> system has been designed for family use, with special attention paid towards accessibility for youth and the elderly.
-                        article
-                            h3 A helping hand
-                            p <strong>Ani</strong> provides personalised assistance when you need it most, whether it be friendly reminders or help in an emergency.
-                        article
-                            h3 Affordable
-                            p The <strong>Ani</strong> system has been refined and optimised to make home-wide implementations easy and affordable.
-                    ul(class="actions")
-                        li
-                            a(href="#", class="button") Browse all
+    // Header
+    header#header
+        h1 Pitchblack
+        p
+          | We make cool
+          a(href="#", style="margin: 0 5px; color: #1cb495 !important;") stuff
+          | simply
+          br
+          | because it's cool and we want to.
 
-    <!-- Footer -->
-    section#footer
-        .inner
-            h2 User stories
-            p <strong>Ani</strong> can be a personal assistant, companion, security guard, or babysitter. The only limit is your imagination.
-            section(class="user-story")
-                article
-                    .user
-                        img(src="/images/ryan.gif")
-                    .story
-                        h3 Ryan
-                        p Ryan likes to listen to music in the shower, he trusts <strong>Ani</strong> with the playlist
-                article
-                    .user
-                        img(src="/images/stacy.gif")
-                    .story
-                        h3 Stacy
-                        p Stacy likes to check to the news and any emails before work. <strong>Ani</strong> follows her around the house reading them out while she gets ready.
-                article
-                    .user
-                        img(src="/images/peter.gif")
-                    .story
-                        h3 Peter
-                        p Peter lives alone and is getting on in years. <strong>Ani</strong> keeps him company and a is around in case he needs a hand, family or emergency services are just one "HELP!" away.
+    // Signup Form
+    form#signup-form(method='post', action='#')
+        input#email(type='email', name='email', placeholder='Email Address')
+        input(type='submit', value='Let me know about the cool stuff')
 
-            ul.copyright
-                li © Onepoint Inc. 2015 all rights reserved.
-                    li
-                        | Hack the best out of the worst time budget
+    // Footer
+    footer#footer
+        ul.icons
+            li
+                a.icon.fa-twitter(href='#')
+                    span.label Twitter
+            li
+                a.icon.fa-instagram(href='#')
+                    span.label Instagram
+            li
+                a.icon.fa-github(href='#')
+                    span.label GitHub
+            li
+                a.icon.fa-envelope-o(href='#')
+                    span.label Email
+        ul.copyright
+            li © Pitchblack.
+            li
+                | Ani
 
 block footerScripts
-    script(type='text/javascript', src='/javascripts/skel.min.js')
     script(type='text/javascript', src='/javascripts/jquery.min.js')
-    script(type='text/javascript', src='/javascripts/jquery.scrollex.min.js')
     script(type='text/javascript', src='/javascripts/main.js')
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-    script(type='text/javascript', src='/javascripts/util.js')
