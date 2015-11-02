@@ -34,7 +34,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 
 /**
  * Start Express server.
