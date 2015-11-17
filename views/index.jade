@@ -3,16 +3,16 @@ extends layout
 block content
     // Header
     header#header
-        h1 Pitchblack
+        h1 black
         p
           | We make cool
-          a(href="/ani", style="margin: 0 5px; color: #1cb495 !important;") stuff
+          a(href="#", style="margin: 0 5px; color: #1cb495 !important;") stuff
           | simply
           br
           | because it's cool and we want to.
 
     // Signup Form
-    form#signup-form(method='post', action='#')
+    form#signup-form(method='post', action='newsletter')
         input#email(type='email', name='email', placeholder='Email Address')
         input(type='submit', value='Let me know about the cool stuff')
 
@@ -20,19 +20,16 @@ block content
     footer#footer
         ul.icons
             li
-                a.icon.fa-twitter(href='#')
+                a.icon.fa-twitter(href='https://www.twitter.com/RGBA0001/')
                     span.label Twitter
             li
-                a.icon.fa-instagram(href='#')
-                    span.label Instagram
+                a.icon.fa-facebook(href='https://www.facebook.com/RGBA0001/')
+                    span.label Facebook
             li
-                a.icon.fa-github(href='#')
-                    span.label GitHub
-            li
-                a.icon.fa-envelope-o(href='#')
+                a.icon.fa-envelope-o(href='mailto:media@black.ai')
                     span.label Email
         ul.copyright
-            li © Pitchblack.
+            li © black
             li
                 | Ani
 
