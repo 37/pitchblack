@@ -1,0 +1,10 @@
+#########################################################################
+
+#                        Initial Mongodb pass                           #
+
+#        Setting Bitnami application password to 'zG7i4wtSfdzv'         #
+
+#                                                                       #
+
+#########################################################################
+ec2-52-64-169-217.ap-southeast-2.compute.amazonaws.com
