@@ -6,15 +6,26 @@ block content
         h1 black
         p
           | We make cool
-          a(href="#", style="margin: 0 5px; color: #1cb495 !important;") stuff
+          a(href="http://shithappens.co", style="margin: 0 5px; color: #1cb495 !important;") stuff
           | simply
           br
           | because it's cool and we want to.
 
+
     // Signup Form
-    form#signup-form(method='post', action='newsletter')
-        input#email(type='email', name='email', placeholder='Email Address')
-        input(type='submit', value='Let me know about the cool stuff')
+    #mc_embed_signup
+        #mce-responses
+            #mce-error-response.response(style='display:none')
+            | &#x9;&#x9;
+            #mce-success-response.response(onchange='hideform()', style='display:none')
+
+        form#mc-embedded-subscribe-form(action='//black.us12.list-manage.com/subscribe/post?u=d8a6dc593c4916035839e7918&id=e6e8d53ab6', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+            input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Email Address')
+
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                input(type='text', style='margin:0px; width: 0px; height: 0px;', name='b_d8a6dc593c4916035839e7918_e6e8d53ab6', tabindex='-1', value='')
+            input#mce-submit-form(type='submit', name='subscribe', value='Let me know about the cool stuff')
 
     // Footer
     footer#footer
@@ -36,3 +47,22 @@ block content
 block footerScripts
     script(type='text/javascript', src='/javascripts/jquery.min.js')
     script(type='text/javascript', src='/javascripts/main.js')
+    script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+    script(type='text/javascript').
+        function hideform(){
+            console.log('Success! Sending verification email and hiding form.');
+            $('#mce-EMAIL').fadeOut();
+            $('#mce-submit-form').fadeOut();
+        }
+
+        (function($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';
+            ftypes[0]='email';
+            fnames[1]='FNAME';
+            ftypes[1]='text';
+            fnames[2]='LNAME';
+            ftypes[2]='text';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
